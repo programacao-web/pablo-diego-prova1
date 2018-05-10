@@ -1,7 +1,7 @@
 from django.forms import ModelForm 
-from .models import Pastebin
+from .models import Paste
 
 class PastebinForms(ModelForm):
     class Meta:
-        model = Pastebin
+        model = Paste
         fields=["title","language","code"]

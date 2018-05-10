@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import PastebinForms
+from .models import Paste
 from django.http import HttpResponseRedirect
 
 def index(request):
@@ -9,7 +10,7 @@ def index(request):
 
 
 def paste(request, id):
-    ctx = {}
+    ctx = {"pastebin": Paste.objects.get(id=id)}
     return render(request, 'pastebin/paste-detail.jinja2', ctx)
 
 

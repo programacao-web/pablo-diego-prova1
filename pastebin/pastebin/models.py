@@ -1,6 +1,6 @@
 from django.db import models
 
-class Pastebin(models.Model):
+class Paste(models.Model):
     
     title = models.CharField(max_length=50) 
     code = models.TextField()
