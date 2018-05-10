@@ -7,6 +7,11 @@
 {% endblock %}
 
 {% block main %}
+  <form method="POST" action="pastebin/create/" >
+    <input name="csrfmiddlewaretoken" value={{csrf_token}}>
+    {{form}}
+    <input type="submit">
+  </form>
   <main class="paste-form">
     <h2>Questao 1</h2>
     <p>Deve mostrar um formulário em que o usuário pode criar um novo 
