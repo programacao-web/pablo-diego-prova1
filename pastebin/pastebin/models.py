@@ -8,7 +8,7 @@ class Paste(models.Model):
     LANGUAGE_CHOICES = (
         ("PYTHON", "Python"),
         ("JS","Javascript"),
-        ("OTHERS", "Outros"),
+        ("OUTROS", "Outros"),
     )
 
     language = models.CharField(

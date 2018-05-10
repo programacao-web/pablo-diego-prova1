@@ -15,7 +15,10 @@ def paste(request, id):
 
 
 def language_list(request, language):
-    ctx = {'pastes': []}
+    pastes = Paste.objects.filter(language=language.upper())
+    print(pastes.__dict__)
+    ctx = {'pastes': pastes,
+           'language':language}
     return render(request, 'pastebin/paste-language.jinja2', ctx)
 
 
